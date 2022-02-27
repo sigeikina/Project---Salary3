@@ -2,7 +2,7 @@
 
 ### 1. Purpose and motivation
 
-The goal of this project is to create a model that predicts a salary depending on factors such as education, age, occupation, gender, race and other.
+The goal of this project is to create a model that predicts a salary depending on factors such as age, gender,city, main-tech, position. occupation.
 
 ### 2. Libraries
 
