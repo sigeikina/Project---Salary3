@@ -13,11 +13,24 @@ Salary is related to many factors. The goal of this project is to create a model
 
 ### 2. Data
 
-The dataset for this Project is a CSV file used from Kaggle website (https://www.kaggle.com/parulpandey/2020-it-salary-survey-for-eu-region). The dataset provides information about IT salary in a different cities of Europe Union in 2020. CSV file has 23 columns and 1253 rows.
+The dataset for this Project is a CSV file used from Kaggle website (https://www.kaggle.com/parulpandey/2020-it-salary-survey-for-eu-region). The dataset provides information about IT salary in a different cities of Europe Union in 2020.
+
+The original Csv file contains 23 columns and 1253 rows. Some columns has been renamed and cleaning has been completed to remove unnecessary columns and NaN values, dropping the number of columns from 23 to 8 and the number of ros from 1253 to 1091.
+
+To understand better dataset, I have created some visualisations:
+
+- Age bar chart shows that most people working in IT industry are between 27 to 34 years old.
+- The box plot shows that people in a junior position are in their early 20, where is people in senior and leading position are over 30 years old (close to 40).
+- Gender pie shows that in IT industry there are 87,5 % males and only 12 % are females.
+- Bar chart ‘Gender vs Salary’ shows males salary is higher than females.
+- Bar chart ‘City’ shows that the most popular city for IT specialist is Berlin.
+- Bar chart ‘Position’ shows that 3 most popular position are Software Engineer, Backend Developer and Data Scientist.
+- Bar chart ‘Position vs Salary’ shows that the highest salary is paid for Engineering Managers.
+- Bar chart ‘Years of experience vs Salary’ shows that the highest salary is paid for people who have approximately from 10 up to 25 years of work experience.
 
 ### 3. Libraries
 
-For this Project I have used Python Pandas library to read csv data, I have used Pandas read_csv function to read the csv file. I have also imported other libraries such as Numpy (for performing mathematical functions), Matplotlib (for visualisation purpose), Seaborn (an additional visualisation tool).
+For this Project I have also imported libraries such as Pandas, Numpy, Matplotlib, Seaborn.
 
 To predict the salary, I have used Linear Regression model, which shows the relationship between the amount of salary and factors such as age, gender, city, position, years of experience, main technology.
 
