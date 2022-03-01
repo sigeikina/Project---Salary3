@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 import numpy as np
 import pandas as pd
 
@@ -34,19 +32,6 @@ def predict():
     years = user_inputs["years of experience"]
     main_tech = user_inputs["main_tech"]
 
-    # pressure = user_inputs["pressure"]
-    # humidity = user_inputs["humidity"]
-    # city_name = user_inputs["city_name"]
-    
-    # # store city names into a df 
-    # city_input_df = pd.DataFrame({
-    #     "city_name": [city_name]
-    # })
-     # store city names into a df 
-    # city_input_df = pd.DataFrame({
-    #     "city_name": [city_name]
-    # })
-
 
     # cat_input_df = user_inputs[["Gender", "City", "Position", "main_tech", "Seniority level"]]
     cat_input_df = pd.DataFrame({
@@ -56,14 +41,14 @@ def predict():
         "main_tech": [main_tech]
     })
 
-    # use encoder to transform the city df 
+    # use encoder to transform df 
     X_transformed = encoder.transform(cat_input_df)
     print(*encoder.categories_)
     cols = np.concatenate(encoder.categories_).ravel()
     
     cat_input_df = pd.DataFrame(columns=[cols], data=X_transformed.toarray())
     
-    # store pressure and humidty into df 
+    # store age and years of experience into df 
     input_df = pd.DataFrame({
         "Age": [age],
         "years of experience": [years]
@@ -78,7 +63,7 @@ def predict():
     # obtain prediction (y) 
     prediction_scaled = model.predict(X_scaled)
     
-    # scale prediction to human readable terms i.e. celcius 
+    # scale prediction 
     prediction = y_scaler.inverse_transform(prediction_scaled)
     return render_template('salary_app.html', result='Predicted Salary: {}'.format(np.round(np.clip(prediction[0][0], 20000,400000)),2))  
 
