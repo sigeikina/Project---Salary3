@@ -2,8 +2,6 @@
 
 http://127.0.0.1:5000/predict
 
-https://st3.depositphotos.com/1187563/12528/i/950/depositphotos_125286564-stock-photo-ukraine-flag-inside-heart-eurovision.jpg
-
 ### 1. Purpose
 
 Salary is related to many factors. The goal of this project is to create a model that predicts a IT salary in EU depending on factors such as:
